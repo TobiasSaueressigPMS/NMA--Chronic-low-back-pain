@@ -2026,7 +2026,7 @@ nrow(network.pain$data.ab)
 
 
 #random effects model with linear splines
-pain_res_random_lin_splines <- mb.run(network.pain, fun= tspline(type="ls", knots=1, pool.1 = "rel", method.1 = "random"), link="smd",
+pain_res_random_lin_splines <- mb.run(network.pain, fun= tspline(type="bs", knots=2, pool.1 = "rel", method.1 = "random"), link="smd",
                        n.iter=30000, n.burnin=10000)
 
 summary(pain_res_random_lin_splines)
